@@ -130,3 +130,74 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = mailto;
     });
 });
+
+// --- Counters (animated) & Testimonials Carousel ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Animated counters
+    const counters = document.querySelectorAll('.number[data-target]');
+    if (counters.length) {
+        const counterObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+                    const duration = 1500; // ms
+                    const start = performance.now();
+
+                    const step = (now) => {
+                        const progress = Math.min((now - start) / duration, 1);
+                        el.textContent = Math.floor(progress * target).toString();
+                        if (progress < 1) requestAnimationFrame(step);
+                        else el.textContent = target.toString();
+                    };
+
+                    requestAnimationFrame(step);
+                    obs.unobserve(el);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        counters.forEach(c => counterObserver.observe(c));
+    }
+
+    // Testimonials carousel (simple)
+    const carousels = document.querySelectorAll('.testimonial-carousel');
+    carousels.forEach(car => {
+        const track = car.querySelector('.testimonial-track');
+        const slides = Array.from(track.children);
+        const nextBtn = car.querySelector('.testimonial-next');
+        const prevBtn = car.querySelector('.testimonial-prev');
+        let index = 0;
+        let autoplay = null;
+
+        const update = () => {
+            const slideWidth = slides[0].getBoundingClientRect().width + 20; // gap
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+        };
+
+        const next = () => {
+            index = (index + 1) % slides.length;
+            update();
+        };
+
+        const prev = () => {
+            index = (index - 1 + slides.length) % slides.length;
+            update();
+        };
+
+        nextBtn?.addEventListener('click', () => { next(); reset(); });
+        prevBtn?.addEventListener('click', () => { prev(); reset(); });
+
+        const start = () => { autoplay = setInterval(next, 5000); };
+        const stop = () => { clearInterval(autoplay); }
+        const reset = () => { stop(); start(); };
+
+        car.addEventListener('mouseenter', stop);
+        car.addEventListener('mouseleave', start);
+        window.addEventListener('resize', update);
+
+        // init
+        update();
+        start();
+    });
+});
