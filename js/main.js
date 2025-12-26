@@ -160,19 +160,41 @@ document.addEventListener('DOMContentLoaded', () => {
         counters.forEach(c => counterObserver.observe(c));
     }
 
-    // Testimonials carousel (simple)
+    // Testimonials carousel (simple) with dots
     const carousels = document.querySelectorAll('.testimonial-carousel');
     carousels.forEach(car => {
         const track = car.querySelector('.testimonial-track');
         const slides = Array.from(track.children);
         const nextBtn = car.querySelector('.testimonial-next');
         const prevBtn = car.querySelector('.testimonial-prev');
+        const dotsContainer = car.parentElement.querySelector('.testimonial-dots');
         let index = 0;
         let autoplay = null;
 
+        // create dots
+        const dots = [];
+        if (dotsContainer) {
+            slides.forEach((s, i) => {
+                const b = document.createElement('button');
+                b.type = 'button';
+                b.setAttribute('aria-label', `Ir al testimonio ${i+1}`);
+                if (i === 0) b.classList.add('active');
+                b.addEventListener('click', () => { index = i; update(); reset(); });
+                dotsContainer.appendChild(b);
+                dots.push(b);
+            });
+        }
+
+        const updateDots = () => {
+            dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        };
+
         const update = () => {
-            const slideWidth = slides[0].getBoundingClientRect().width + 20; // gap
+            const style = window.getComputedStyle(track);
+            const gap = parseFloat(style.gap) || 20;
+            const slideWidth = slides[0].getBoundingClientRect().width + gap;
             track.style.transform = `translateX(-${index * slideWidth}px)`;
+            updateDots();
         };
 
         const next = () => {
