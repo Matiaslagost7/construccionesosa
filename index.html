@@ -13,9 +13,13 @@
     <!-- Navigation -->
     <header>
         <nav>
-            <a href="index.html" class="logo">Construcciones <span>Sosa</span></a>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo_navbar.webp" alt="Construcciones Sosa" class="nav-logo">
+                <span class="logo-text"><span class="logo-word">Construcciones</span> <span class="logo-sosa">Sosa</span></span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Inicio</a></li>
+                <li><a href="pages/about.html">Sobre Nosotros</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>
@@ -133,12 +137,12 @@
                 </div>
             </div>
             <div class="footer-col">
-                <h3>Contáctenos</h3>
-                <form class="footer-form">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea rows="3" placeholder="Mensaje" required></textarea>
-                    <button type="submit" class="btn-footer">Enviar</button>
+                <h3>Solicita tu Cotización</h3>
+                <form id="quote-form" class="footer-form">
+                    <input id="q-name" name="name" type="text" placeholder="Nombre y Apellido" required>
+                    <input id="q-email" name="email" type="email" placeholder="Email de contacto" required>
+                    <textarea id="q-details" name="details" rows="3" placeholder="Detalles del proyecto para cotizar" required></textarea>
+                    <button type="submit" class="btn-footer">Solicitar Cotización</button>
                 </form>
             </div>
         </div>

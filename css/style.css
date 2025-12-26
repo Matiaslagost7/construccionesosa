@@ -66,6 +66,21 @@ nav {
     color: var(--primary-color);
 }
 
+/* Logo image for small/medium screens (hidden on desktop) */
+.nav-logo {
+    display: none;
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Text wrapper so we can hide the words on smaller screens */
+.logo-text { display: inline; color: var(--light-text); font-weight: 700; }
+
+/* Specific logo word coloring (higher specificity to override .logo span) */
+.logo .logo-word { color: var(--light-text); }
+.logo .logo-sosa { color: var(--primary-color); }
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -135,6 +150,16 @@ nav {
 @media (min-width: 1024px) {
     .hero {
         background-attachment: fixed;
+    }
+}
+
+/* Show image logo and hide textual logo on tablets and smaller */
+@media (max-width: 1024px) {
+    .nav-logo {
+        display: block;
+    }
+    .logo-text {
+        display: none;
     }
 }
 
@@ -400,6 +425,22 @@ footer {
     color: #ced4da; /* Lighter grey for contrast on dark background */
     padding: 80px 5% 20px;
     font-size: 0.95rem;
+}
+
+/* Distinguish page content from footer when used with .page-content */
+.page-content {
+    background: var(--accent-color);
+}
+
+.page-content .content-section {
+    background: var(--accent-color);
+    color: var(--text-color);
+    padding: 60px 5%;
+}
+
+/* Add a clear separator when footer follows page content */
+.page-content + footer {
+    border-top: 6px solid var(--primary-color);
 }
 
 .footer-container {
@@ -671,3 +712,17 @@ footer {
         padding: 60px 5%;
     }
 }
+
+/* --- About / Team Styles --- */
+.about-history, .about-mv, .about-team { margin-bottom: 40px; }
+.about-history p { color: var(--text-color); margin-bottom: 12px; }
+.about-mv { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.about-mv h2 { margin-bottom: 10px; color: var(--secondary-color); }
+.about-team .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+.team-member { background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; }
+.team-member h4 { margin-top: 10px; color: var(--secondary-color); }
+.team-member p { color: var(--subtitle-color); margin-top: 6px; }
+.team-avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--primary-color); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; margin: 0 auto; }
+
+/* Container utility used on about page */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }

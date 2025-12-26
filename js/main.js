@@ -94,3 +94,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// --- Quote Form Handler (mailto) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const quoteForm = document.getElementById('quote-form');
+    if (!quoteForm) return;
+
+    quoteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('q-name')?.value.trim() || '';
+        const email = document.getElementById('q-email')?.value.trim() || '';
+        const details = document.getElementById('q-details')?.value.trim() || '';
+
+        if (!name || !email || !details) {
+            alert('Por favor completa todos los campos para solicitar la cotización.');
+            return;
+        }
+
+        const to = 'contacto@construccionessosa.com';
+        const subject = encodeURIComponent('Solicitud de Cotización - ' + name);
+        const bodyLines = [
+            'Nombre: ' + name,
+            'Email: ' + email,
+            '',
+            'Detalles del proyecto:',
+            details
+        ];
+        const body = encodeURIComponent(bodyLines.join('\n'));
+
+        // Build mailto link
+        const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+
+        // Open default mail client
+        window.location.href = mailto;
+    });
+});
