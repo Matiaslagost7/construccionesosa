@@ -5,77 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Todos los proyectos de Construcciones Sosa.">
     <title>Nuestros Proyectos | Construcciones Sosa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <a href="../index.html" class="logo">
-                <img src="../assets/images/logo_navbar.webp" alt="Construcciones Sosa" class="nav-logo">
-                <span class="logo-text"><span class="logo-word">Construcciones</span> <span class="logo-sosa">Sosa</span></span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre Nosotros</a></li>
-                <li><a href="../index.html#services">Servicios</a></li>
-                <li><a href="../index.html#projects">Proyectos</a></li>
-                <li><a href="../index.html#contact">Contacto</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
+    <!-- Header / Navbar -->
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center" href="../index.html#home">
+                        <img src="../assets/images/Logo.jpeg" alt="Construcciones Sosa" style="height:44px; width:auto; object-fit:contain;">
+                        <span class="ms-2 brand-text">Construcciones Sosa</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                            <li class="nav-item"><a class="nav-link" href="../index.html#home">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#services">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#projects">Proyectos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
     <!-- Page Hero -->
     <main class="page-content">
-    <section class="hero" style="height: 50vh;">
-        <h1>Nuestros Proyectos</h1>
-        <p>Explore nuestro portafolio completo de obras y diseños.</p>
-    </section>
-    <!-- Projects Grid -->
-    <section class="section content-section">
-        <div class="all-projects-grid">
-            <div class="project-card reveal" onclick="window.location.href='project-aurum.html'">
-                <img src="../assets/images/project1.png" alt="Residencia Moderna">
-                <div class="project-overlay">
-                    <h3>Casa Aurum</h3>
-                    <p>Residencia de Lujo</p>
+        <section class="hero" style="height: 50vh;">
+            <h1>Nuestros Proyectos</h1>
+            <p>Explore nuestro portafolio completo de obras y diseños.</p>
+        </section>
+        <!-- Projects Grid -->
+        <section class="section content-section">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="project-card reveal" onclick="window.location.href='project-aurum.html'">
+                            <img src="../assets/images/project1.png" alt="Residencia Moderna">
+                            <div class="project-overlay">
+                                <h3>Casa Aurum</h3>
+                                <p>Residencia de Lujo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-card reveal" onclick="window.location.href='project-zenith.html'">
+                            <img src="../assets/images/project2.png" alt="Edificio Corporativo">
+                            <div class="project-overlay">
+                                <h3>Torre Zenith</h3>
+                                <p>Complejo de Oficinas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-card reveal" onclick="window.location.href='project-loft.html'">
+                            <img src="../assets/images/project3.png" alt="Interiorismo">
+                            <div class="project-overlay">
+                                <h3>Loft Central</h3>
+                                <p>Renovación Interior</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-card reveal" onclick="window.location.href='project-aurum.html'">
+                            <img src="../assets/images/project1.png" alt="Casa Aurum 2">
+                            <div class="project-overlay">
+                                <h3>Casa Aurum II</h3>
+                                <p>Segunda Etapa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project-card reveal" onclick="window.location.href='project-zenith.html'">
+                            <img src="../assets/images/project2.png" alt="Edificio Corporativo">
+                            <div class="project-overlay">
+                                <h3>Torre Zenith Norte</h3>
+                                <p>Expansión</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="project-card reveal" onclick="window.location.href='project-zenith.html'">
-                <img src="../assets/images/project2.png" alt="Edificio Corporativo">
-                <div class="project-overlay">
-                    <h3>Torre Zenith</h3>
-                    <p>Complejo de Oficinas</p>
-                </div>
-            </div>
-            <div class="project-card reveal" onclick="window.location.href='project-loft.html'">
-                <img src="../assets/images/project3.png" alt="Interiorismo">
-                <div class="project-overlay">
-                    <h3>Loft Central</h3>
-                    <p>Renovación Interior</p>
-                </div>
-            </div>
-            <div class="project-card reveal" onclick="window.location.href='project-aurum.html'">
-                <img src="../assets/images/project1.png" alt="Casa Aurum 2">
-                <div class="project-overlay">
-                    <h3>Casa Aurum II</h3>
-                    <p>Segunda Etapa</p>
-                </div>
-            </div>
-            <div class="project-card reveal" onclick="window.location.href='project-zenith.html'">
-                <img src="../assets/images/project2.png" alt="Edificio Corporativo">
-                <div class="project-overlay">
-                    <h3>Torre Zenith Norte</h3>
-                    <p>Expansión</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
     </main>
     <!-- Mega Footer (Contact & Info) -->
     <footer id="contact">
@@ -114,10 +130,10 @@
             <div class="footer-col">
                 <h3>Solicita tu Cotización</h3>
                 <form id="quote-form" class="footer-form">
-                    <input id="q-name" name="name" type="text" placeholder="Nombre y Apellido" required>
-                    <input id="q-email" name="email" type="email" placeholder="Email de contacto" required>
-                    <textarea id="q-details" name="details" rows="3" placeholder="Detalles del proyecto para cotizar" required></textarea>
-                    <button type="submit" class="btn-footer">Solicitar Cotización</button>
+                    <input id="q-name" name="name" type="text" class="form-control mb-2" placeholder="Nombre y Apellido" required>
+                    <input id="q-email" name="email" type="email" class="form-control mb-2" placeholder="Email de contacto" required>
+                    <textarea id="q-details" name="details" rows="3" class="form-control mb-2" placeholder="Detalles del proyecto para cotizar" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-footer">Solicitar Cotización</button>
                 </form>
             </div>
         </div>
@@ -125,6 +141,7 @@
             <p>&copy; 2025 Construcciones Sosa. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

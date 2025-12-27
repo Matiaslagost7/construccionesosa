@@ -6,144 +6,169 @@
     <meta name="description"
         content="Construcciones Sosa - Excelencia en construcción, arquitectura y diseño de interiores.">
     <title>Construcciones Sosa | Premium Construction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo_navbar.webp" alt="Construcciones Sosa" class="nav-logo">
-                <span class="logo-text"><span class="logo-word">Construcciones</span> <span class="logo-sosa">Sosa</span></span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="pages/about.html">Sobre Nosotros</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </header>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Construyendo Su Futuro</h1>
-        <p>Excelencia arquitectónica y precisión constructiva para espacios que inspiran.</p>
-        <a href="#contact" class="btn">Cotizar Proyecto</a>
-    </section>
+        <!-- Header / Navbar -->
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#home">
+                        <span class="brand-text">CONSTRUCCIONES <span class="brand-sosa">SOSA</span></span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-    <!-- Counters / Stats (moved below projects) -->
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <h2 class="section-title reveal">Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-card reveal">
-                <i class="fas fa-hammer service-icon"></i>
-                <h3>Construcción</h3>
-                <p>Ejecución de obras residenciales y comerciales con los más altos estándares de calidad y seguridad.
-                </p>
-            </div>
-            <div class="service-card reveal">
-                <i class="fas fa-pencil-ruler service-icon"></i>
-                <h3>Arquitectura</h3>
-                <p>Diseño arquitectónico innovador que fusiona funcionalidad y estética moderna.</p>
-            </div>
-            <div class="service-card reveal">
-                <i class="fas fa-paint-roller service-icon"></i>
-                <h3>Remodelación</h3>
-                <p>Transformación de interiores para crear ambientes lujosos, confortables y únicos.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <h2 class="section-title reveal">Proyectos Destacados</h2>
-        <div class="projects-carousel-container reveal">
-            <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-            <div class="carousel-track-container">
-                <ul class="carousel-track">
-                    <li class="carousel-slide project-card" onclick="window.location.href='pages/project-aurum.html'">
-                        <img src="assets/images/project1.png" alt="Residencia Moderna">
-                        <div class="project-overlay">
-                            <h3>Casa Aurum</h3>
-                            <p>Residencia de Lujo</p>
-                        </div>
-                    </li>
-                    <li class="carousel-slide project-card" onclick="window.location.href='pages/project-zenith.html'">
-                        <img src="assets/images/project2.png" alt="Edificio Corporativo">
-                        <div class="project-overlay">
-                            <h3>Torre Zenith</h3>
-                            <p>Complejo de Oficinas</p>
-                        </div>
-                    </li>
-                    <li class="carousel-slide project-card" onclick="window.location.href='pages/project-loft.html'">
-                        <img src="assets/images/project3.png" alt="Interiorismo">
-                        <div class="project-overlay">
-                            <h3>Loft Central</h3>
-                            <p>Renovación Interior</p>
-                        </div>
-                    </li>
-                    <li class="carousel-slide project-card" onclick="window.location.href='pages/project-aurum.html'">
-                        <img src="assets/images/project1.png" alt="Casa Aurum 2">
-                        <div class="project-overlay">
-                            <h3>Casa Aurum II</h3>
-                            <p>Segunda Etapa</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
-        </div>
-        <div class="center-btn-container reveal">
-            <a href="pages/all-projects.html" class="btn">Ver Todos los Proyectos</a>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" aria-label="Comentarios de clientes">
-        <!-- Counters / Stats -->
-        <section class="counters" aria-label="Estadísticas de la empresa">
-            <div class="counter" aria-hidden="false">
-                <div class="number" data-target="128">0</div>
-                <div class="label">Proyectos Realizados</div>
-            </div>
-            <div class="counter">
-                <div class="number" data-target="18">0</div>
-                <div class="label">Años de Experiencia</div>
-            </div>
-            <div class="counter">
-                <div class="number" data-target="320">0</div>
-                <div class="label">Clientes Satisfechos</div>
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                            <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/about.html">Sobre Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h1>Construyendo Su Futuro</h1>
+                        <p>Excelencia arquitectónica y precisión constructiva para espacios que inspiran.</p>
+                        <a href="#contact" class="btn btn-lg btn-quote">Cotizar Proyecto</a>
+                    </div>
+                </div>
             </div>
         </section>
-        <div class="testimonial-carousel">
-            <div class="testimonial-track">
-                <div class="testimonial-slide">
-                    <p class="testimonial-quote">"Excelente trabajo y cumplimiento de plazos. Totalmente recomendados."</p>
-                    <p class="testimonial-author">— Laura M., Cliente</p>
-                </div>
-                <div class="testimonial-slide">
-                    <p class="testimonial-quote">"Profesionales y atentos a cada detalle del proyecto."</p>
-                    <p class="testimonial-author">— Pedro G., Cliente</p>
-                </div>
-                <div class="testimonial-slide">
-                    <p class="testimonial-quote">"La comunicación fue impecable y el resultado superó expectativas."</p>
-                    <p class="testimonial-author">— Ana R., Cliente</p>
+
+        <!-- Counters / Stats (moved below projects) -->
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <h2 class="section-title reveal">Nuestros Servicios</h2>
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <h3>Construcción</h3>
+                        <p>Ejecución de obras residenciales y comerciales con los más altos estándares de calidad y seguridad.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <h3>Arquitectura</h3>
+                        <p>Diseño arquitectónico innovador que fusiona funcionalidad y estética moderna.</p>
+                    </div>
+                    <div class="service-card reveal">
+                        <h3>Remodelación</h3>
+                        <p>Transformación de interiores para crear ambientes lujosos, confortables y únicos.</p>
+                    </div>
                 </div>
             </div>
-            <div class="testimonial-controls">
-                <button class="testimonial-prev" aria-label="Anterior">‹</button>
-                <button class="testimonial-next" aria-label="Siguiente">›</button>
+        </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <h2 class="section-title reveal">Proyectos Destacados</h2>
+            <div class="projects-carousel-container reveal">
+                <div class="container">
+                    <div class="projects-carousel-inner position-relative">
+                        <button class="carousel-btn prev" type="button" aria-label="Anterior proyecto"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-track-container">
+                            <div class="carousel-track">
+                                <a class="carousel-slide project-card" href="pages/project-aurum.html" aria-label="Abrir Casa Aurum">
+                                    <img src="assets/images/project1.png" alt="Residencia Moderna">
+                                    <div class="project-overlay">
+                                        <h3>Casa Aurum</h3>
+                                        <p>Residencia de Lujo</p>
+                                    </div>
+                                </a>
+                                <a class="carousel-slide project-card" href="pages/project-zenith.html" aria-label="Abrir Torre Zenith">
+                                    <img src="assets/images/project2.png" alt="Edificio Corporativo">
+                                    <div class="project-overlay">
+                                        <h3>Torre Zenith</h3>
+                                        <p>Complejo de Oficinas</p>
+                                    </div>
+                                </a>
+                                <a class="carousel-slide project-card" href="pages/project-loft.html" aria-label="Abrir Loft Central">
+                                    <img src="assets/images/project3.png" alt="Interiorismo">
+                                    <div class="project-overlay">
+                                        <h3>Loft Central</h3>
+                                        <p>Renovación Interior</p>
+                                    </div>
+                                </a>
+                                <a class="carousel-slide project-card" href="pages/project-aurum.html" aria-label="Abrir Casa Aurum II">
+                                    <img src="assets/images/project1.png" alt="Casa Aurum 2">
+                                    <div class="project-overlay">
+                                        <h3>Casa Aurum II</h3>
+                                        <p>Segunda Etapa</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" type="button" aria-label="Siguiente proyecto"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-dots" aria-hidden="false"></div>
-        </div>
-    </section>
+            <!-- Accessible dots + live region for carousel -->
+                        <div class="projects-dots" aria-label="Indicadores de proyectos" role="tablist"></div>
+            <div class="carousel-status visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+            <div class="center-btn-container reveal">
+                <a href="pages/all-projects.html" class="btn btn-lg btn-quote">Ver Todos los Proyectos</a>
+            </div>
+        </section>
+
+        <section id="counters" class="counters section" aria-label="Estadísticas de la empresa">
+            <div class="container">
+                <div class="counter" aria-hidden="false">
+                    <div class="number" data-target="128">0</div>
+                    <div class="label">Proyectos Realizados</div>
+                </div>
+                <div class="counter">
+                    <div class="number" data-target="12500" data-unit="m²">0</div>
+                    <div class="label">M² Construidos</div>
+                </div>
+                <div class="counter">
+                    <div class="number" data-target="18">0</div>
+                    <div class="label">Años de Experiencia</div>
+                </div>
+                <div class="counter">
+                    <div class="number" data-target="320">0</div>
+                    <div class="label">Clientes Satisfechos</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials section" aria-label="Comentarios de clientes">
+            <div class="container">
+                <div class="testimonial-carousel">
+                <div class="testimonial-track">
+                    <div class="testimonial-slide" tabindex="0">
+                        <p class="testimonial-quote">"Excelente trabajo y cumplimiento de plazos. Totalmente recomendados."</p>
+                        <p class="testimonial-author">— Laura M., Cliente</p>
+                    </div>
+                    <div class="testimonial-slide" tabindex="0">
+                        <p class="testimonial-quote">"Profesionales y atentos a cada detalle del proyecto."</p>
+                        <p class="testimonial-author">— Pedro G., Cliente</p>
+                    </div>
+                    <div class="testimonial-slide" tabindex="0">
+                        <p class="testimonial-quote">"La comunicación fue impecable y el resultado superó expectativas."</p>
+                        <p class="testimonial-author">— Ana R., Cliente</p>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev" type="button" aria-label="Anterior testimonio">‹</button>
+                    <span class="testimonial-sep" aria-hidden="true"></span>
+                    <button class="testimonial-next" type="button" aria-label="Siguiente testimonio">›</button>
+                </div>
+                <div class="testimonial-dots" aria-hidden="true"></div>
+            </div>
+        </section>
+    </main>
     <!-- Mega Footer (Contact & Info) -->
     <footer id="contact">
         <div class="footer-container">
@@ -181,10 +206,10 @@
             <div class="footer-col">
                 <h3>Solicita tu Cotización</h3>
                 <form id="quote-form" class="footer-form">
-                    <input id="q-name" name="name" type="text" placeholder="Nombre y Apellido" required>
-                    <input id="q-email" name="email" type="email" placeholder="Email de contacto" required>
-                    <textarea id="q-details" name="details" rows="3" placeholder="Detalles del proyecto para cotizar" required></textarea>
-                    <button type="submit" class="btn-footer">Solicitar Cotización</button>
+                    <input id="q-name" name="name" type="text" class="form-control mb-2" placeholder="Nombre y Apellido" required>
+                    <input id="q-email" name="email" type="email" class="form-control mb-2" placeholder="Email de contacto" required>
+                    <textarea id="q-details" name="details" rows="3" class="form-control mb-2" placeholder="Detalles del proyecto para cotizar" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-footer">Solicitar Cotización</button>
                 </form>
             </div>
         </div>
@@ -192,6 +217,7 @@
             <p>&copy; 2025 Construcciones Sosa. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
