@@ -42,7 +42,7 @@
 
     <!-- Counters / Stats (moved below team, above testimonials) -->
 
-    <main class="section content-section">
+    <main class="section content-section bg-grey">
         <div class="container">
             <section class="about-history">
                 <h2>Historia</h2>
@@ -89,39 +89,48 @@
             </section>
 
             <!-- Counters / Stats -->
-            <section class="counters" aria-label="Estadísticas de la empresa">
-                <div class="counter">
-                    <div class="number" data-target="128">0</div>
-                    <div class="label">Proyectos Realizados</div>
-                </div>
-                <div class="counter">
-                    <div class="number" data-target="18">0</div>
-                    <div class="label">Años de Experiencia</div>
-                </div>
-                <div class="counter">
-                    <div class="number" data-target="320">0</div>
-                    <div class="label">Clientes Satisfechos</div>
+            <section id="about-counters" class="about-counters-section counters" aria-label="Estadísticas de la empresa">
+                <div class="container">
+                    <div class="counter">
+                        <div class="number" data-target="128">0</div>
+                        <div class="label">Proyectos Realizados</div>
+                    </div>
+                    <div class="counter">
+                        <div class="number" data-target="12500">0</div>
+                        <div class="label">M² Construidos</div>
+                    </div>
+                    <div class="counter">
+                        <div class="number" data-target="18">0</div>
+                        <div class="label">Años de Experiencia</div>
+                    </div>
+                    <div class="counter">
+                        <div class="number" data-target="320">0</div>
+                        <div class="label">Clientes Satisfechos</div>
+                    </div>
                 </div>
             </section>
 
             <!-- Testimonials -->
-            <section class="testimonials" aria-label="Comentarios de clientes">
-                <div class="testimonial-carousel">
-                    <div class="testimonial-track">
-                        <div class="testimonial-slide">
-                            <p class="testimonial-quote">"Construcciones Sosa transformó nuestra idea en realidad, cuidando cada detalle."</p>
-                            <p class="testimonial-author">— Martín P., Cliente</p>
+            <section id="about-testimonials" class="about-testimonials-section testimonials" aria-label="Comentarios de clientes">
+                <div class="container">
+                    <div class="testimonial-carousel">
+                        <div class="testimonial-track">
+                            <div class="testimonial-slide">
+                                <p class="testimonial-quote">"Construcciones Sosa transformó nuestra idea en realidad, cuidando cada detalle."</p>
+                                <p class="testimonial-author">— Martín P., Cliente</p>
+                            </div>
+                            <div class="testimonial-slide">
+                                <p class="testimonial-quote">"Calidad, compromiso y profesionalismo. Recomendados al 100%."</p>
+                                <p class="testimonial-author">— Claudia V., Cliente</p>
+                            </div>
                         </div>
-                        <div class="testimonial-slide">
-                            <p class="testimonial-quote">"Calidad, compromiso y profesionalismo. Recomendados al 100%."</p>
-                            <p class="testimonial-author">— Claudia V., Cliente</p>
+                        <div class="testimonial-controls">
+                            <button class="testimonial-prev" type="button" aria-label="Anterior testimonio">‹</button>
+                            <span class="testimonial-sep" aria-hidden="true"></span>
+                            <button class="testimonial-next" type="button" aria-label="Siguiente testimonio">›</button>
                         </div>
+                        <div class="testimonial-dots" aria-hidden="false"></div>
                     </div>
-                    <div class="testimonial-controls">
-                        <button class="testimonial-prev" aria-label="Anterior">‹</button>
-                        <button class="testimonial-next" aria-label="Siguiente">›</button>
-                    </div>
-                    <div class="testimonial-dots" aria-hidden="false"></div>
                 </div>
             </section>
 

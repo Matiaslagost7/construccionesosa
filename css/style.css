@@ -1128,32 +1128,49 @@ main.page-content {
   padding: 0 20px;
 }
 
-/* Ensure counters use horizontal layout on larger screens while stacking on small screens */
-.counters .container {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 767px) {
+  .counters .container,
+  .about-counters-section .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .counters .container .counter,
+  .about-counters-section .container .counter {
+    flex: 0 0 100%; /* Full width on smallest smartphones */
+    min-width: unset;
+    margin-bottom: 24px;
+  }
 }
 
-@media (max-width: 767px) {
-  .counters .container {
-    display: block;
+/* Tablet: 2x2 layout */
+@media (min-width: 576px) and (max-width: 991px) {
+  .counters .container,
+  .about-counters-section .container {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .counters .container .counter {
-    margin-bottom: 16px;
+  .counters .container .counter,
+  .about-counters-section .container .counter {
+    flex: 0 0 45%; /* Two per row on tablets/large phones */
+    min-width: 140px;
+    margin-bottom: 24px;
   }
 }
 
 /* --- Counters (stats) --- */
-.counters {
+.counters,
+.about-counters-section {
+  display: block;
+  padding: 40px 5% 20px;
+  background: transparent;
+  margin-bottom: 10px;
+}
+.counters .container,
+.about-counters-section .container {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   justify-content: center;
-  align-items: center;
-  padding: 18px 5% 8px; /* tighten vertical spacing */
-  background: transparent; /* integrate with body */
-  margin-bottom: 8px; /* spacing before testimonials */
+  align-items: flex-start;
 }
 .counter {
   text-align: center;
@@ -1171,9 +1188,14 @@ main.page-content {
 }
 
 /* --- Testimonials carousel --- */
-.testimonials {
+.testimonials,
+.about-testimonials-section {
   padding: 40px 5%;
-  background: var(--accent-color);
+  background: transparent; /* Use container/main background */
+}
+
+.bg-grey {
+  background-color: var(--accent-color);
 }
 .testimonial-carousel {
   max-width: 1100px;

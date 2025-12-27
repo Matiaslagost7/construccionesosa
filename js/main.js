@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // --- Counters (animated) & Testimonials Carousel ---
 document.addEventListener("DOMContentLoaded", () => {
   // Animated counters (scoped to counters section)
-  const countersSection = document.querySelector("#counters");
+  const countersSection = document.querySelector("#counters, #about-counters");
   if (countersSection) {
     const counters = countersSection.querySelectorAll(".number[data-target]");
     if (counters.length) {
