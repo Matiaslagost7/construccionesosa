@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Loft Central - Renovación interior moderna por Construcciones Sosa.">
-    <title>Loft Central | Construcciones Sosa</title>
+    <meta name="description" content="Solicita tu cotización - Construcciones Sosa.">
+    <title>Cotización | Construcciones Sosa</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header / Navbar -->
+        <!-- Header / Navbar -->
         <header class="site-header">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container">
@@ -27,51 +27,69 @@
                             <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
                             <li class="nav-item"><a class="nav-link" href="../index.html#services">Servicios</a></li>
                             <li class="nav-item"><a class="nav-link" href="all-projects.html">Proyectos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Cotizar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="cotizacion.html">Cotización</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-    <main class="page-content">
-        <!-- Project Hero -->
-        <section class="hero" style="height: 60vh; background-image: linear-gradient(var(--dark-overlay), var(--dark-overlay)), url('../assets/images/project3.png');">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 text-center">
-                        <h1>Loft Central</h1>
-                        <p>Renovación Interior</p>
+
+    <section class="hero" style="height:30vh; padding-top:60px;">
+        <h1>Cotización</h1>
+        <p>Obtén una cotización personalizada para tu proyecto.</p>
+    </section>
+
+    <main class="section content-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="quote-form-container">
+                        <h2 class="quote-title">Solicita tu Cotización</h2>
+                        <p class="quote-subtitle">Cuéntanos sobre tu proyecto y te enviaremos una cotización detallada y personalizada.</p>
+                        <form id="quote-form" class="quote-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="q-name" class="form-label">Nombre y Apellido</label>
+                                    <input id="q-name" name="name" type="text" class="form-control-custom" placeholder="Tu nombre completo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="q-email" class="form-label">Email de Contacto</label>
+                                    <input id="q-email" name="email" type="email" class="form-control-custom" placeholder="tuemail@ejemplo.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="q-phone" class="form-label">Teléfono</label>
+                                    <input id="q-phone" name="phone" type="tel" class="form-control-custom" placeholder="+54 2972 123456" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="q-type" class="form-label">Tipo de Proyecto</label>
+                                    <select id="q-type" name="type" class="form-control-custom" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="residencial">Construcción Residencial</option>
+                                        <option value="comercial">Construcción Comercial</option>
+                                        <option value="remodelacion">Remodelación</option>
+                                        <option value="arquitectura">Diseño Arquitectónico</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="q-details" class="form-label">Detalles del Proyecto</label>
+                                <textarea id="q-details" name="details" rows="5" class="form-control-custom" placeholder="Describe tu proyecto, dimensiones, materiales preferidos, presupuesto aproximado, etc." required></textarea>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="btn-quote">Solicitar Cotización</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Project Details -->
-        <section class="section">
-            <div class="project-details">
-                <div>
-                    <img src="../assets/images/project3.png" alt="Loft Central" class="project-img">
-                </div>
-                <div>
-                    <h2 class="project-title">Sobre el Proyecto</h2>
-                    <div class="project-divider"></div>
-                    <p class="project-desc">
-                        Loft Central transforma un espacio histórico en un hogar contemporáneo vibrante. La renovación respeta la estructura original mientras introduce elementos modernos para el confort diario.
-                    </p>
-                    <p class="project-desc">
-                        <strong>Características Principales:</strong>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i> Diseño de planta abierta</li>
-                            <li><i class="fas fa-check"></i> Restauración de ladrillo visto</li>
-                            <li><i class="fas fa-check"></i> Cocina gourmet integrada</li>
-                            <li><i class="fas fa-check"></i> Iluminación de diseño</li>
-                        </ul>
-                    </p>
-                    <a href="contact.html" class="btn btn-outline-secondary btn-project">Solicitar Cotización</a>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
-    <!-- Mega Footer (Contact & Info) -->
+
+
     <footer class="site-footer">
         <div class="container">
             <!-- Brand Column -->
@@ -89,8 +107,8 @@
                     <li><a href="../index.html#home">Inicio</a></li>
                     <li><a href="about.html">Sobre Nosotros</a></li>
                     <li><a href="../index.html#services">Servicios</a></li>
-                    <li><a href="all-projects.html">Proyectos</a></li>
-                    <li><a href="contact.html">Cotización</a></li>
+                    <li><a href="../index.html#projects">Proyectos</a></li>
+                    <li><a href="cotizacion.html">Cotización</a></li>
                 </ul>
             </div>
 

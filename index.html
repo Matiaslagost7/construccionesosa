@@ -27,8 +27,8 @@
                             <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" href="pages/about.html">Sobre Nosotros</a></li>
                             <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/all-projects.html">Proyectos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/contact.html">Cotizar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="col-md-8 text-center">
                         <h1>Construyendo Su Futuro</h1>
                         <p>Excelencia arquitectónica y precisión constructiva para espacios que inspiran.</p>
-                        <a href="#quote-form" class="btn btn-lg btn-quote">Cotizar Proyecto</a>
+                        <a href="pages/contact.html" class="btn btn-lg btn-quote">Solicitar Cotización Gratis</a>
                     </div>
                 </div>
             </div>
@@ -169,52 +169,68 @@
             </div>
         </section>
     </main>
-    <!-- Mega Footer (Contact & Info) -->
-    <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-col">
-                <img src="assets/images/Logo.jpeg" alt="Construcciones Sosa Logo" class="footer-logo">
-                <p class="footer-slogan">"Construyendo sueños con bases sólidas y visión de futuro."</p>
+
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Brand Column -->
+            <div class="footer-column footer-brand">
+                <a class="footer-logo-link" href="#home" style="margin-bottom: 20px; display: block;">
+                    <img src="assets/images/Logo.jpeg" alt="Construcciones Sosa Logo" class="footer-logo">
+                </a>
+                <p class="footer-slogan">Excelencia en cada detalle. Construyendo espacios que inspiran y perduran en el tiempo.</p>
             </div>
-            <div class="footer-col">
+
+            <!-- Links Column -->
+            <div class="footer-column">
+                <h3>Enlaces Directos</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="pages/about.html">Sobre Nosotros</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="pages/contact.html">Cotización</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Column -->
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#services">Construcción</a></li>
+                    <li><a href="#services">Arquitectura</a></li>
+                    <li><a href="#services">Remodelación</a></li>
+                    <li><a href="#services">Diseño de Interiores</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-column">
                 <h3>Contacto</h3>
-                <div class="contact-info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Av. Principal 123, Ciudad, País</span>
-                </div>
-                <div class="contact-info-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+54 9 11 1234 5678</span>
-                </div>
-                <div class="contact-info-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>contacto@construccionessosa.com</span>
-                </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h3>Ubicación de la Empresa</h3>
-                <div class="footer-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48802.253980162044!2d-71.34082038409456!3d-40.13914565000997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96110e743605d0c7%3A0x71c43ffb1c66bc3a!2sSan%20Mart%C3%ADn%20de%20los%20Andes%2C%20Neuqu%C3%A9n%2C%20Argentina!5e0!3m2!1ses!2scl!4v1766757194935!5m2!1ses!2scl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h3>Solicita tu Cotización</h3>
-                <form id="quote-form" class="footer-form">
-                    <input id="q-name" name="name" type="text" class="form-control mb-2" placeholder="Nombre y Apellido" required>
-                    <input id="q-email" name="email" type="email" class="form-control mb-2" placeholder="Email de contacto" required>
-                    <textarea id="q-details" name="details" rows="3" class="form-control mb-2" placeholder="Detalles del proyecto para cotizar" required></textarea>
-                    <button type="submit" class="btn btn-primary btn-footer">Solicitar Cotización</button>
-                </form>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>San Martín de los Andes, <br>Neuquén, Argentina</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+54 2972 123456</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@construccionessosa.com</span>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Construcciones Sosa. Todos los derechos reservados.</p>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Construcciones Sosa. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

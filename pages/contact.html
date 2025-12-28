@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Información de contacto y ubicación de Construcciones Sosa.">
+    <title>Contacto | Construcciones Sosa</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+        <!-- Header / Navbar -->
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html#home">
+                        <span class="brand-text">CONSTRUCCIONES <span class="brand-sosa">SOSA</span></span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                            <li class="nav-item"><a class="nav-link" href="../index.html#home">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">Sobre Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#services">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="all-projects.html">Proyectos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Cotizar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/images/contact-hero.png'); height:40vh; padding-top:60px;">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold">Solicita tu Cotización</h1>
+            <p class="lead mx-auto" style="max-width: 800px;">Cuéntanos sobre tu proyecto y recibe un presupuesto detallado y personalizado sin compromiso.</p>
+        </div>
+    </section>
+
+    <main class="page-content">
+        <!-- Contact Info and Map Section -->
+        <section class="section content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="contact-cards">
+                            <div class="glass-card">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Nuestra Ubicación</h4>
+                                    <p>San Martín de los Andes, Neuquén, Argentina</p>
+                                </div>
+                            </div>
+                            <div class="glass-card">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Llámanos</h4>
+                                    <p>+54 2972 123456</p>
+                                </div>
+                            </div>
+                            <div class="glass-card">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@construccionessosa.com</p>
+                                </div>
+                            </div>
+                            <div class="glass-card">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Horarios de Atención</h4>
+                                    <p>Lun - Vie: 9:00 - 18:00<br>Sáb: 9:00 - 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-wrapper">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48802.253980162044!2d-71.34082038409456!3d-40.13914565000997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96110e743605d0c7%3A0x71c43ffb1c66bc3a!2sSan%20Mart%C3%ADn%20de%20los%20Andes%2C%20Neuqu%C3%A9n%2C%20Argentina!5e0!3m2!1ses!2scl!4v1766757194935!5m2!1ses!2scl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="contact-form-container">
+                            <h2 id="contact-form">Solicita tu Cotización</h2>
+                            <p class="mb-4">Completa el formulario y nuestro equipo te enviará un presupuesto detallado en menos de 24 horas. <small class="text-muted">¿Solo tienes una consulta? Selecciona "Consulta General" en tipo de proyecto.</small></p>
+                            <form id="contact-form-premium" class="premium-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="c-name" class="form-label">Nombre Completo</label>
+                                        <input id="c-name" name="name" type="text" class="form-control-custom" placeholder="Ej: Juan Pérez" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="c-email" class="form-label">Correo Electrónico</label>
+                                        <input id="c-email" name="email" type="email" class="form-control-custom" placeholder="juan@ejemplo.com" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="c-phone" class="form-label">Teléfono</label>
+                                        <input id="c-phone" name="phone" type="tel" class="form-control-custom" placeholder="+54 2972 123456" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="c-type" class="form-label">Tipo de Proyecto</label>
+                                        <select id="c-type" name="type" class="form-control-custom" required>
+                                            <option value="">Selecciona una opción</option>
+                                            <option value="residencial">Construcción Residencial</option>
+                                            <option value="comercial">Construcción Comercial</option>
+                                            <option value="remodelacion">Remodelación</option>
+                                            <option value="arquitectura">Diseño Arquitectónico</option>
+                                            <option value="consulta">Consulta General</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="c-message" class="form-label">Detalles del Proyecto o Consulta</label>
+                                    <textarea id="c-message" name="message" rows="6" class="form-control-custom" placeholder="Describe tu proyecto: dimensiones, materiales preferidos, presupuesto aproximado, plazos, o cualquier consulta que tengas..." required></textarea>
+                                </div>
+                                <div class="form-submit">
+                                    <button type="submit" class="btn-quote">Solicitar Cotización</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Brand Column -->
+            <div class="footer-column footer-brand">
+                <a class="footer-logo-link" href="../index.html#home" style="margin-bottom: 20px; display: block;">
+                    <img src="../assets/images/Logo.jpeg" alt="Construcciones Sosa Logo" class="footer-logo">
+                </a>
+                <p class="footer-slogan">Excelencia en cada detalle. Construyendo espacios que inspiran y perduran en el tiempo.</p>
+            </div>
+
+            <!-- Links Column -->
+            <div class="footer-column">
+                <h3>Enlaces Directos</h3>
+                <ul class="footer-links-list">
+                    <li><a href="../index.html#home">Inicio</a></li>
+                    <li><a href="about.html">Sobre Nosotros</a></li>
+                    <li><a href="../index.html#services">Servicios</a></li>
+                    <li><a href="../index.html#projects">Proyectos</a></li>
+                    <li><a href="contact.html">Cotización</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Column -->
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <ul class="footer-links-list">
+                    <li><a href="../index.html#services">Construcción</a></li>
+                    <li><a href="../index.html#services">Arquitectura</a></li>
+                    <li><a href="../index.html#services">Remodelación</a></li>
+                    <li><a href="../index.html#services">Diseño de Interiores</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>San Martín de los Andes, <br>Neuquén, Argentina</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+54 2972 123456</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@construccionessosa.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Construcciones Sosa. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
